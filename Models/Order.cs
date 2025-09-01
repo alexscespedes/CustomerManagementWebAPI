@@ -12,8 +12,8 @@ public class Order
     public int Quantity { get; set; }
     public decimal TotalAmount { get; set; }
     public DateTime OrderDate { get; set; } = DateTime.UtcNow;
-    public OrderStatus OrderStatus { get; set; }
+    public OrderStatus Status { get; set; }
     public string? Notes { get; set; }
-    public required virtual Customer Customer { get; set; }
-    public required virtual Product Product { get; set; }
+    public virtual Customer? Customer { get; set; }
+    public virtual Product? Product { get; set; }
 }
